@@ -10,6 +10,7 @@ class Honekuru
 
   def reload!
     @page = @page.link_with(:href => '/zapping').click
+    reload! if ignore_cases_matched?
   end
 
   def ignore_cases_matched?
