@@ -26,15 +26,15 @@ class Honekuru
   end
 
   def title
-    @page.search(content).search('h1').text
+    content().search('h1').text
   end
 
   def body
-    @page.search(content).search('div[@class=content-body]').text
+    content().search('div[@class=content-body]').text
   end
 
   def created_at
-    @page.search(content).search('div[@class=created-at]').text
+    content().search('div[@class=created-at]').text
   end
 
   def user_name
@@ -42,7 +42,7 @@ class Honekuru
   end
 
   def video
-    @page.search(content).search('div[@class=video-container]/iframe').attr('src')
+    content().search('div[@class=video-container]/iframe').attr('src')
   end
 
   :private
