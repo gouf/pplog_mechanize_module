@@ -21,7 +21,8 @@ class Honekuru
   end
 
   def content
-    '/html/body/div[2]/section/div[2]'
+    content = '/html/body/div[2]/section/div[2]'
+    @page.search(content)
   end
 
   def title
