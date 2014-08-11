@@ -13,7 +13,7 @@ class Honekuru
   end
 
   def ignore_cases_matched?
-    return if @page.nil?
+    return false if @page.nil?
     user = (user_name == '@sushi_pedia')
     title = ! title().match(/^.*\.md$/).nil?
     user || title
