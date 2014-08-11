@@ -1,4 +1,3 @@
-require 'pp'
 require_relative 'mec'
 
 class Honekuru
@@ -55,26 +54,3 @@ class Honekuru
 
   alias_method :rezap!, :reload!
 end
-h = Honekuru.new
-#puts '----------------'
-#puts h.user_name
-#puts h.title
-#puts h.body
-#puts h.created_at
-#puts "https://pplog.net/u/#{h.user_name.gsub('@', '')}"
-10.times do
-  puts '----------------'
-  puts h.user_name
-  puts h.title
-  puts h.body
-  puts h.created_at
-  puts "https://pplog.net/u/#{h.user_name.gsub('@', '')}"
-  h.rezap!
-  sleep 2
-end
-
-#pp h.pplog_zapped_page
-#pp h.pplog_zapped_page.search('/html/body/div[2]/section/div[2]').methods
-#pp page = h.pplog_zapped_page.search('/html/body/div[2]/section/div[2]')
-#pp page.search('h1')
-#pp h.pplog_zapped_page.search('/html/body/div[2]/section/div[2]').text
