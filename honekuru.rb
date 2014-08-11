@@ -1,4 +1,4 @@
-require_relative 'mec'
+require_relative 'module/mechanize/mec'
 
 class Honekuru
   include PoemPoster
