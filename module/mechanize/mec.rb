@@ -33,7 +33,7 @@ module PoemPoster
     'https://www.pplog.net/zapping'
   end
 
-  def get_pplog_home_page # 1 -> access_twitter_page
+  def pplog_home_page # 1 -> access_twitter_page
     # Run authorize
     access_twitter_page
     login_to_twitter
