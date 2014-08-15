@@ -25,7 +25,7 @@ module PoemPoster
 
   def pplog_zapped_page
     url = zapping_url
-    @a = @a || Mechanize.new
+    @a ||= Mechanize.new
     @a.get(url)
   end
 
