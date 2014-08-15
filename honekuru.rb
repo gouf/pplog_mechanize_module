@@ -8,14 +8,14 @@ class Honekuru
   end
 
   def reload!
-    @page = @page.link_with(:href => '/zapping').click
+    @page = @page.link_with(href: '/zapping').click
     reload! if ignore_cases_matched?
   end
 
   def ignore_cases_matched?
     return false if @page.nil?
     user = (user_name == '@sushi_pedia')
-    title = ! title().match(/^.*\.md$/).nil?
+    title = !title.match(/^.*\.md$/).nil?
     user || title
   end
 
@@ -25,15 +25,15 @@ class Honekuru
   end
 
   def title
-    content().search('h1').text
+    content.search('h1').text
   end
 
   def body
-    content().search('div[@class=content-body]').text
+    content.search('div[@class=content-body]').text
   end
 
   def created_at
-    content().search('div[@class=created-at]').text
+    content.search('div[@class=created-at]').text
   end
 
   def user_name
@@ -41,7 +41,7 @@ class Honekuru
   end
 
   def video
-    content().search('div[@class=video-container]/iframe').attr('src')
+    content.search('div[@class=video-container]/iframe').attr('src')
   end
 
   :private
