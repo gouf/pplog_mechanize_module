@@ -58,8 +58,8 @@ module PoemPoster
 
   def fillup_auth_form
     auth_form = @twitter_page.forms.first
-    user_name = user_name()
-    password  = password()
+    user_name = user_name
+    password  = password
     auth_form.field_with(name: 'session[username_or_email]').value = user_name
     auth_form.field_with(name: 'session[password]').value = password
     auth_form
