@@ -4,15 +4,15 @@ require 'pp'
 module PoemPoster
   def post_poem poem
     return if poem.empty?
-    new_post_form = get_post_new_page.forms.first
+    new_post_form = post_new_page.forms.first
     new_post_form.field_with(name: 'post[content]').value = poem
 
     new_post_form.submit
   end
 
-  def get_post_new_page
-    pplog_home_page = get_pplog_home_page
-    new_poem_page = pplog_home_page.link_with(href: '/my/posts/new').click
+  def post_new_page
+    pplog_home_page = pplog_home_page
+    pplog_home_page.link_with(href: '/my/posts/new').click
   end
 
   def user_name
