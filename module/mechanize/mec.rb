@@ -2,7 +2,7 @@ require 'mechanize'
 require 'pp'
 
 module PoemPoster
-  def post_poem poem
+  def post_poem(poem)
     return if poem.empty?
     new_post_form = post_new_page.forms.first
     new_post_form.field_with(name: 'post[content]').value = poem
@@ -65,7 +65,7 @@ module PoemPoster
     auth_form
   end
 
-  def submit_auth_form auth_form
+  def submit_auth_form(auth_form)
     submit_button = auth_form.buttons.first
     @auth_confirm_page = auth_form.submit(submit_button)
   end
