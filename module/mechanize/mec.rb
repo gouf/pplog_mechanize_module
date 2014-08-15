@@ -70,7 +70,6 @@ module PoemPoster
     @auth_confirm_page = auth_form.submit(submit_button)
   end
 
-
   def pass_confirmation # 4 -> return pplog_page
     # allow authorize
     pplog_page = @auth_confirm_page.link_with(text: 'click here to continue').click
