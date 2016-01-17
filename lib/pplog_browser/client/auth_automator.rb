@@ -1,5 +1,4 @@
 require 'mechanize'
-require 'memoizable'
 
 module PplogBrowser
   module Client

@@ -1,5 +1,3 @@
-require 'memoizable'
-
 module PplogBrowser
   module Client
     class Browser < AuthAutomator
