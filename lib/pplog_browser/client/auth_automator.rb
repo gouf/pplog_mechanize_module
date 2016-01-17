@@ -21,6 +21,8 @@ module PplogBrowser
 
       private
 
+      attr_reader :password
+
       def pplog_home_page
         # Run authorize
         page = open_twitter_page
